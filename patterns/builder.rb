@@ -2,7 +2,7 @@
 class User
   attr_accessor :first_name, :last_name, :birthday, :gender, :roles, :status, :email, :password
 
-  def initialize(first_name=nil, last_name=nil, birthday=nil, gender=nil, roles=[], status=nil, email=nil, password=nil)
+  def initialize(first_name = nil, last_name = nil, birthday = nil, gender = nil, roles = [], status = nil, email = nil, password = nil)
     @first_name = first_name
     @last_name = last_name
     @birthday = birthday
@@ -74,13 +74,11 @@ class UserBuilder
     @user.password = password
   end
 
-  def user
-    @user
-  end
+  attr_reader :user
 end
 
 user = UserBuilder.build do |builder|
-	builder.set_name('John', 'Doe')
+  builder.set_name('John', 'Doe')
   builder.set_birthday('1999-03-02')
   builder.set_as_on_hold
   builder.set_as_men

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class User
   attr_accessor :name, :age
 
@@ -10,7 +8,6 @@ class User
 end
 
 class Admin < User
-  
 end
 
 class UserFactory
